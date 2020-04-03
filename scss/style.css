@@ -1,0 +1,372 @@
+@keyframes web-zone {
+  0% {
+    left: 0%; }
+  15% {
+    left: 0%; }
+  20% {
+    left: -100%; }
+  35% {
+    left: -100%; }
+  40% {
+    left: -200%; }
+  60% {
+    left: -200%; }
+  65% {
+    left: -300%; }
+  80% {
+    left: -300%; }
+  85% {
+    left: -400%; }
+  100% {
+    left: -400%; } }
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: grid; }
+
+section,
+aside,
+footer {
+  margin-top: 20px; }
+
+header {
+  height: 209px; }
+  header img {
+    margin-left: 132px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px; }
+
+nav#social {
+  position: fixed;
+  top: 41%; }
+  nav#social ul {
+    margin-top: 20px;
+    padding-left: 15px;
+    list-style-type: none; }
+    nav#social ul li {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.25);
+      text-decoration: none; }
+      nav#social ul li a {
+        color: #4a00e0; }
+        nav#social ul li a i {
+          margin-top: 9px; }
+        nav#social ul li a i.fa-facebook {
+          margin-left: 12px; }
+        nav#social ul li a i.fa-youtube,
+        nav#social ul li a i.fa-instagram,
+        nav#social ul li a i.fa-pinterest {
+          margin-left: 10px; }
+        nav#social ul li a i.fa-google-plus {
+          margin-left: 9px; }
+    nav#social ul li:hover i {
+      color: white; }
+    nav#social ul li.facebook:hover {
+      background-color: #3B5998; }
+    nav#social ul li.youtube:hover {
+      background-color: #E50914; }
+    nav#social ul li.instagram:hover {
+      background: linear-gradient(5deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); }
+    nav#social ul li.pinterest:hover {
+      background-color: red; }
+    nav#social ul li.gmail:hover {
+      background-color: #EA4335; }
+
+nav#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000;
+  height: 42px; }
+  nav#menu ul.menu {
+    padding: 0; }
+    nav#menu ul.menu li {
+      display: inline;
+      list-style-type: none; }
+    nav#menu ul.menu a {
+      text-decoration: none;
+      padding: 10px 20px;
+      color: black;
+      font-weight: bold; }
+      nav#menu ul.menu a:hover {
+        color: #8e2de2; }
+  nav#menu li.sub-menu {
+    position: relative; }
+    nav#menu li.sub-menu::before {
+      content: "";
+      position: absolute; }
+    nav#menu li.sub-menu:hover ul {
+      visibility: visible; }
+    nav#menu li.sub-menu ul {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      visibility: hidden;
+      width: 120px;
+      left: 20px; }
+      nav#menu li.sub-menu ul li {
+        display: block;
+        margin: 10px 0; }
+        nav#menu li.sub-menu ul li a {
+          padding: 0 10px; }
+          nav#menu li.sub-menu ul li a:hover {
+            color: #4a00e0; }
+
+#img-slider {
+  border-radius: 10px;
+  position: relative;
+  width: 900px;
+  height: 290px;
+  margin: 10px auto;
+  margin-top: 0;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden; }
+  #img-slider figure {
+    width: 500%;
+    position: relative;
+    margin: 0;
+    left: 0;
+    animation: web-zone 20s infinite linear; }
+    #img-slider figure img {
+      width: 20%;
+      height: 290px;
+      float: left; }
+
+#subcribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  background: linear-gradient(white, #f0f0f0);
+  border-radius: 100px;
+  padding: 10px;
+  margin-left: 132px; }
+  #subcribe span {
+    width: 320px;
+    font-style: italic;
+    font-size: 14px;
+    margin: 0 10px;
+    padding: 0; }
+  #subcribe input[placeholder="YOUR NAME"],
+  #subcribe input[placeholder="YOUR EMAIL"] {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    margin: 0 5px;
+    width: 200px; }
+  #subcribe input[value="SUBCRIBE"] {
+    font-family: "Poppins", sans-serif; }
+  #subcribe input[type="submit"] {
+    height: 25px;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+    color: white;
+    width: 100px;
+    padding: 0;
+    bottom: 0;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 20px; }
+    #subcribe input[type="submit"]:hover {
+      background: linear-gradient(180deg, #8e2de2, #4a00e0); }
+
+#overview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; }
+  #overview .over-wrap {
+    margin: 0 25px;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms; }
+    #overview .over-wrap:hover {
+      box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.25); }
+    #overview .over-wrap .wrapped {
+      position: absolute;
+      left: 8.5%;
+      top: 30%;
+      background-color: #fff;
+      padding: 5px 10px;
+      width: calc(100% - 60px);
+      height: 128px;
+      z-index: 100; }
+      #overview .over-wrap .wrapped::after {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        top: 13px;
+        left: 13px;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        border: 2px solid #8e2de2;
+        -webkit-transition-duration: 200ms;
+        transition-duration: 200ms; }
+      #overview .over-wrap .wrapped:hover, #overview .over-wrap .wrapped:focus {
+        background: linear-gradient(45deg, #8e2de2, #4a00e0); }
+        #overview .over-wrap .wrapped:hover .over-content p,
+        #overview .over-wrap .wrapped:hover .over-content h1 a, #overview .over-wrap .wrapped:focus .over-content p,
+        #overview .over-wrap .wrapped:focus .over-content h1 a {
+          color: white; }
+        #overview .over-wrap .wrapped:hover::after, #overview .over-wrap .wrapped:focus::after {
+          border-color: white; }
+      #overview .over-wrap .wrapped .over-content p {
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        color: #4a00e0; }
+      #overview .over-wrap .wrapped .over-content h1 {
+        text-align: center; }
+        #overview .over-wrap .wrapped .over-content h1 a {
+          text-decoration: none;
+          color: black; }
+  #overview .street-food,
+  #overview .restaurant,
+  #overview .drink {
+    background-size: cover; }
+  #overview .street-food {
+    background-image: url(../images/food/5.jpg); }
+  #overview .restaurant {
+    background-image: url(../images/food/18.jpg); }
+  #overview .drink {
+    background-image: url(../images/drink/d5.jpg); }
+
+#main-body {
+  margin-top: 50px;
+  display: block;
+  clear: both; }
+  #main-body article.main-content {
+    float: left;
+    width: 60%;
+    margin-left: 64px; }
+    #main-body article.main-content span {
+      padding-bottom: 2px;
+      border-bottom: 2px solid #4a00e0; }
+    #main-body article.main-content article {
+      padding-bottom: 20px;
+      margin-top: 20px;
+      border-bottom: .5px solid #cccccc; }
+      #main-body article.main-content article div {
+        display: flex; }
+        #main-body article.main-content article div img {
+          width: 300px;
+          height: 300px;
+          margin-right: 30px; }
+        #main-body article.main-content article div .detail {
+          display: inline; }
+          #main-body article.main-content article div .detail p.location {
+            font-size: 12px;
+            color: grey;
+            text-transform: uppercase; }
+          #main-body article.main-content article div .detail p.text-content {
+            padding-right: 10px;
+            font-size: 15px;
+            color: grey; }
+          #main-body article.main-content article div .detail div.rm {
+            width: 100px;
+            height: 25px;
+            border: 1.5px solid #4a00e0; }
+            #main-body article.main-content article div .detail div.rm a {
+              text-decoration: none;
+              font-size: 13px;
+              padding: 0 13px;
+              margin: 0 auto;
+              color: black; }
+              #main-body article.main-content article div .detail div.rm a:hover {
+                background: linear-gradient(180deg, #8e2de2, #4a00e0);
+                color: white; }
+  #main-body aside {
+    float: right;
+    width: 25%;
+    margin: 0 64px 0 0; }
+    #main-body aside span {
+      margin-left: 55px;
+      padding-bottom: 2px;
+      border-bottom: 2px solid #4a00e0; }
+    #main-body aside .img-rl {
+      overflow: hidden; }
+      #main-body aside .img-rl img {
+        margin: 20px 55px;
+        width: 200px;
+        height: 300px; }
+    #main-body aside .rl-aside div {
+      display: flex;
+      margin-bottom: 20px; }
+      #main-body aside .rl-aside div img {
+        width: 100px;
+        height: 100px;
+        margin-left: 55px; }
+      #main-body aside .rl-aside div .rl-detail {
+        margin-left: 20px;
+        display: inline; }
+        #main-body aside .rl-aside div .rl-detail p {
+          margin-top: 5px;
+          font-size: 12px;
+          color: grey; }
+
+#img-feeded {
+  margin: 20px 64px; }
+  #img-feeded span {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #4a00e0; }
+  #img-feeded .ig-container {
+    display: inline-flex;
+    flex-wrap: wrap; }
+    #img-feeded .ig-container .ig {
+      margin-right: 10px;
+      position: relative; }
+      #img-feeded .ig-container .ig:hover {
+        background: linear-gradient(90deg, #8e2de2, #4a00e0); }
+        #img-feeded .ig-container .ig:hover div p {
+          opacity: 1;
+          transform: translateY(155px);
+          transition: 0.5s all ease-in-out; }
+      #img-feeded .ig-container .ig img {
+        width: 150px;
+        height: 150px;
+        transition: 1s all ease-in-out; }
+        #img-feeded .ig-container .ig img:hover {
+          cursor: pointer;
+          transition: 1s all ease-in-out; }
+      #img-feeded .ig-container .ig div p {
+        top: 5px;
+        position: absolute;
+        font-size: 12px;
+        margin-left: 10px;
+        font-weight: bold;
+        opacity: 0; }
+
+footer {
+  display: flex;
+  border-top: .5px solid #cccccc; }
+  footer p {
+    font-size: 13px;
+    color: grey;
+    margin: 10px 0 10px 62px; }
+
+#on-top a i {
+  color: black;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  font-size: 50px; }
+  #on-top a i:hover {
+    color: #4a00e0; }
+
+/*# sourceMappingURL=style.css.map */
